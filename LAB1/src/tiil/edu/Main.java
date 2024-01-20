@@ -44,9 +44,32 @@ public class Main {
 		
 		
 	}
+	
+	 private static double calculateTheTich(double canh) {
+	        // Cách 1: Sử dụng công thức cơ bản
+	        double theTich = canh * canh * canh;
+
+	        // Cách 2: Sử dụng hàm Math.pow()
+	        // double theTich = Math.pow(canh, 3);
+
+	        return theTich;
+	    }
+
+	public static void BaiTap3() {
+		
+		 	Scanner scanner = new Scanner(System.in);
+	        System.out.print("Nhập chiều dài cạnh của khối lập phương: ");
+	        double canh = scanner.nextDouble(); 
+	        double theTich = calculateTheTich(canh);  
+	        System.out.println("Thể tích của khối lập phương: " + theTich);	      
+	        scanner.close();
+	}
+	
+	
 	public static void main(String[] args) {
 		//BaiTap1();
-		BaiTap2();
+		//BaiTap2();
+		BaiTap3();
 	}
 
 }
