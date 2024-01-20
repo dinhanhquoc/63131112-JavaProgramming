@@ -64,12 +64,32 @@ public class Main {
 	        System.out.println("Thể tích của khối lập phương: " + theTich);	      
 	        scanner.close();
 	}
-	
+	public static void BaiTap4() {
+			Scanner scanner = new Scanner(System.in);
+	        System.out.print("Nhập hệ số a: ");
+	        double a = scanner.nextDouble();
+	        System.out.print("Nhập hệ số b: ");
+	        double b = scanner.nextDouble();
+	        System.out.print("Nhập hệ số c: ");
+	        double c = scanner.nextDouble();
+	        double delta = calculateDelta(a, b, c);
+	        if (delta >= 0) {
+	            double canDelta = Math.sqrt(delta);
+	            System.out.println("Căn delta: " + canDelta);
+	        } else {
+	            System.out.println("Delta âm, không thể tính căn delta.");
+	        }
+	        scanner.close();
+	}
+	 private static double calculateDelta(double a, double b, double c) {
+	        return Math.pow(b, 2) - 4 * a * c;
+	    }
 	
 	public static void main(String[] args) {
 		//BaiTap1();
 		//BaiTap2();
-		BaiTap3();
+		//BaiTap3();
+		BaiTap4();
 	}
 
 }
