@@ -42,9 +42,24 @@ public class Main {
          System.out.println();
      }
 	 }
+	public static void BaiTap3() {
+		
+		int tiendien = 0 ;
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Mời bạn nhập số tiền điện: ");
+		tiendien = scanner.nextInt();
+		if(tiendien<=50 ) {
+			System.out.println("Số tiền điện phải trả là "+tiendien*1000);
+		}else {
+			System.out.println("Số tiền điện phải trả là "+tiendien*1200);
+		}
+		
+	}
+	
 
 	public static void main(String[] args) {
-		BaiTap2();
+		//BaiTap2();
+		 BaiTap3();
 	}
 
 }
