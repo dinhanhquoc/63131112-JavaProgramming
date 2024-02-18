@@ -1,4 +1,5 @@
 package till.edu;
+import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
 	
@@ -40,21 +41,47 @@ public class Main {
         	  System.out.println(i + " x " + j + " = " + (i * j));
          }
          System.out.println();
-     }
+     	}
 	 }
 	public static void BaiTap3() {
-		
-		int tiendien = 0 ;
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Mời bạn nhập số tiền điện: ");
-		tiendien = scanner.nextInt();
-		if(tiendien<=50 ) {
-			System.out.println("Số tiền điện phải trả là "+tiendien*1000);
-		}else {
-			System.out.println("Số tiền điện phải trả là "+tiendien*1200);
-		}
+		int n = scanner.nextInt();
+		int arr []= new int[n];
+		System.out.println("Nhập các phần tử của mảng:");
+		 for (int i = 0; i < n; i++) {
+	            System.out.print("Phần tử thứ " + (i + 1) + ": ");
+	            arr[i] = scanner.nextInt();
+	        }
+		 Arrays.sort(arr);
+		 System.out.println("Mảng sau khi sắp xếp:");
+	        for (int i = 0; i < n; i++) {
+	            System.out.print(arr[i] + " ");
+	        }
+	        System.out.println();
+	        int min = arr[0];
+	        for (int i = 1; i < n; i++) {
+	            min = Math.min(min, arr[i]);
+	        }
+	        System.out.println("Phần tử nhỏ nhất của mảng: " + min);
+	        
+	        // Tính và xuất trung bình cộng các phần tử chia hết cho 3
+	        int sum = 0;
+	        int count = 0;
+	        for (int i = 0; i < n; i++) {
+	            if (arr[i] % 3 == 0) {
+	                sum += arr[i];
+	                count++;
+	            }
+	        }
+	        if (count > 0) {
+	            double average = (double) sum / count;
+	            System.out.println("Trung bình cộng các phần tử chia hết cho 3: " + average);
+	        } else {
+	            System.out.println("Không có phần tử nào chia hết cho 3 trong mảng.");
+	        }
+	    }
 		
-	}
+		
 	
 
 	public static void main(String[] args) {
