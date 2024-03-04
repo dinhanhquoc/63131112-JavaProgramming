@@ -56,8 +56,6 @@ public class SanPham {
         this(tenSp, donGia, 0); // Gọi hàm tạo có tham số
     }
 
-    // Phương thức tính thuế nhập khẩu (private)
-    private double getThueNhapKhau() {
-        return 0.1 * donGia; // 10% giá sản phẩm
-    }
+  
+ 
 }
